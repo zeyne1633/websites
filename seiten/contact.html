@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harth Coffee | Kontakt</title>
+    <link rel="stylesheet" href="../contact_style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">HARTH<span>COFFEE</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menü</a>
+            <a href="contact.html" class="active">Kontakt</a>
+        </nav>
+        <button class="btn-table" onclick="openModal()">Tisch reservieren</button>
+    </header>
+
+    <section class="contact-section">
+        <h2>Kontaktiere uns</h2>
+        <p>Fragen, Feedback oder Reservierungen? Schreib uns einfach eine Nachricht.</p>
+        
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <label>E-Mail-Adresse</label>
+                <input type="email" required>
+            </div>
+            <div class="form-group">
+                <label>Nachricht</label>
+                <textarea rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-dark">Nachricht senden</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-bottom"><p>&copy; 2026 Harth Coffee. Alle Rechte vorbehalten.</p></div>
+    </footer>
+    <script src="../contact_script.js"></script>
+</body>
+</html>

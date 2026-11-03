@@ -11,16 +11,16 @@
     --ueberschriften: Grechen Fuemen;
 
     /* Hauptfarbe für Elemente oder Überschriften */
-    --haupt-farbe: #a57c0b;
+    --haupt-farbe: #503c06;
 
     /* Hintergrundfarbe der Seite */
-    --hintergrund-farbe: #fff;
+    --hintergrund-farbe: #b1710aad;
 
     /* Standard-Schriftfarbe */
     --schrift-farbe: #000;
 
     /* Zweitfarbe (z. B. für Akzente oder Hover-Effekte) */
-    --zweit-farbe: #be9c1c;
+    --zweit-farbe: #b1710aad;
 
     /* Dritte Farbe für zusätzliche Akzente */
     --dritt-farbe: #80ED99;
@@ -90,10 +90,15 @@ ul {
     z-index: 9999; /* Liegt ganz oben über allem */
     transition: opacity 1s ease; /* Macht das Ausblenden weich */
     font-size: 1.8rem;
-    color: rgb(113, 82, 62);
+    color: rgb(186, 148, 123);
     max-width: 600px;
     line-height: 1.4;
     text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  
+
 }
 
 /* Styling für die ungeordnete Liste im Navigationsbereich */
@@ -144,7 +149,7 @@ a {
     min-height: 600px;
 
     /* Setzt das Hintergrundbild */
-    background-image: url("bilder/Bild1.jpg");
+    background-image: url("bilder/Bild2.jpg");
 
     /* Bild soll den gesamten Bereich ausfüllen */
     background-size: cover;
