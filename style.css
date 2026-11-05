@@ -11,10 +11,10 @@
     --ueberschriften: Grechen Fuemen;
 
     /* Hauptfarbe für Elemente oder Überschriften */
-    --haupt-farbe: #503c06;
+    --haupt-farbe: #b1710aad;
 
     /* Hintergrundfarbe der Seite */
-    --hintergrund-farbe: #b1710aad;
+    --hintergrund-farbe: #fafaf9e6;
 
     /* Standard-Schriftfarbe */
     --schrift-farbe: #000;
@@ -41,7 +41,7 @@
 /* Allgemeines Styling für den Seiteninhalt */
 body {
     /* Verwendet die definierte Schriftart aus den Variablen */
-    font-family: var(--text-schriftart), sans-serif;
+    font-family: var(--text-schriftart);
 
     /* Normale Schriftstärke */
     font-weight: normal;
@@ -162,8 +162,8 @@ a {
 
     /* Inhalt wird per Flexbox zentriert */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 /* Allgemeines Styling für Inhaltsbereiche (Sections) */
@@ -228,7 +228,24 @@ section p {
 /* Allgemeines Styling für Bilder */
 img {
     /* Bilder dürfen maximal 300 px breit sein */
-    max-width: 200px;
+    width: 200px;
+}
+
+.motivationen {
+    display: flex;
+    justify-content: space-between;
+}
+.img_container {
+    /* border: 1px solid red; */
+    /* width: 33%;s */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        width: 300px;
+        margin-bottom: 2rem;
+    }
 }
 
 /* Fußzeile der Seite */
