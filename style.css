@@ -11,7 +11,7 @@
     --ueberschriften: Grechen Fuemen;
 
     /* Hauptfarbe für Elemente oder Überschriften */
-    --haupt-farbe: #b1710aad;
+    --haupt-farbe: #664004ad;
 
     /* Hintergrundfarbe der Seite */
     --hintergrund-farbe: #fafaf9e6;
@@ -20,7 +20,7 @@
     --schrift-farbe: #000;
 
     /* Zweitfarbe (z. B. für Akzente oder Hover-Effekte) */
-    --zweit-farbe: #b1710aad;
+    --zweit-farbe: #664004ad;
 
     /* Dritte Farbe für zusätzliche Akzente */
     --dritt-farbe: #80ED99;
@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 .main-navbar {
     /* Nutzt Flexbox, um Elemente nebeneinander anzuordnen */
     display: flex;
-
+    height: 10vh;
     /* Platzierung: Abstand zwischen linkem und rechtem Bereich (z. B. Logo und Menü) */
     justify-content: space-between;
 
@@ -90,7 +90,7 @@ ul {
     z-index: 9999; /* Liegt ganz oben über allem */
     transition: opacity 1s ease; /* Macht das Ausblenden weich */
     font-size: 1.8rem;
-    color: rgb(186, 148, 123);
+    color: rgba(207, 154, 95, 0.914);
     max-width: 600px;
     line-height: 1.4;
     text-align: center;
@@ -117,6 +117,9 @@ ul {
 
     /* Erlaubt Umbruch, wenn nicht genug Platz ist */
     flex-wrap: wrap;
+}
+.main-navbar img{
+    max-width: 10px;
 }
 
 /* Allgemeines Styling für Links */
@@ -230,6 +233,10 @@ img {
     /* Bilder dürfen maximal 300 px breit sein */
     width: 200px;
 }
+.bild-beratung{
+    width: 350px;
+
+}
 
 .motivationen {
     display: flex;
@@ -237,13 +244,14 @@ img {
 }
 .img_container {
     /* border: 1px solid red; */
-    /* width: 33%;s */
+    width: 33%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     img {
-        width: 300px;
+        width: 350px;
+        height: auto;
         margin-bottom: 2rem;
     }
 }
@@ -266,7 +274,7 @@ footer {
     align-items: center;
 
     /* Textfarbe weiß */
-    color: white;
+    color: rgb(19, 17, 17);
 
     /* Mindesthöhe der Fußzeile */
     min-height: 15vh;
@@ -284,7 +292,7 @@ footer {
 /* Footer-Links */
 .footer-navbar a {
     /* Weiße Schriftfarbe */
-    color: white;
+    color: rgb(9, 9, 9);
 }
 
 /* Hover-Effekt für Footer-Links */
@@ -292,7 +300,10 @@ footer {
     /* Unterstreichung mit Akzentfarbe */
     text-decoration: underline var(--zweit-farbe) 3px;
 }
-
+#angebot{
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
 /* Media Query: Regeln für kleine Bildschirme (max. 500px) */
 @media screen and (max-width: 500px) {
 
