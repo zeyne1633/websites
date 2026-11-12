@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 350px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .carousel {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .img_container {
+            display: none;
+            width: 100%;
+            text-align: center;
+            background-color: antiquewhite;
+            padding: 1rem 3rem;
+        }
+
+        .img_container.active {
+            display: block;
+        }
+
+        .img_container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            /* border-radius: 50%; */
+            z-index: 2;
+        }
+
+        .carousel-btn:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .carousel-btn.prev {
+            left: -60px;
+        }
+
+        .carousel-btn.next {
+            right: -60px;
+        }
+    </style>
+    <title>Karousell</title>
+</head>
+
+<body>
+    <div class="carousel-container">
+        <button class="carousel-btn prev" onclick="moveSlide(-1)">
+            &#10094;
+        </button>
+        <div class="carousel">
+            <div class="img_container carousel-item">
+                <img src="bilder/Gorse.jpeg" alt="Gorse">
+                <p>Gorse - Neue Hoffnung</p>
+                <br>
+                <p>Wenn Hoffnung und Zuversicht verloren gegangen sind, hilft Gorse dabei, wieder Licht zu sehen und an
+                    positive Veränderungen zu glauben.</p>
+            </div>
+
+            <div class="img_container carousel-item">
+                <img src="bilder/Larch.jpeg" alt="Larch">
+                <p>Larch - Selbstvertrauen</p>
+                <br>
+                <p>Wenn Selbstzweifel dich zurückhalten, unterstützt Larch dich dabei, an deine Fähigkeiten zu glauben
+                    und dir mehr zuzutrauen.</p>
+            </div>
+
+            <div class="img_container carousel-item">
+                <img src="bilder/Wild Rose.jpeg" alt="Wild Rose">
+                <p>Wild Rose - Lebensfreude</p>
+                <br>
+                <p>Wenn Gleichgültigkeit und Resignation den Alltag bestimmen, lädt Wild Rose dazu ein, neue
+                    Lebensfreude und Begeisterung zu entdecken.</p>
+            </div>
+
+            <div class="img_container carousel-item">
+                <img src="bilder/Bethlehem.jpeg" alt="Star of Bethlehem - Trost und Geborgenheit">
+                <p>Star of Bethlehem - Trost und Geborgenheit</p>
+                <br>
+                <p>In Zeiten von Schock, Kummer oder seelischer Erschütterung steht Star of Bethlehem für Trost, inneren
+                    Frieden und liebevolle Unterstützung.</p>
+                <br>
+                <p>Bachblüten werden traditionell als sanfte emotionale Begleitung eingesetzt.</p>
+            </div>
+        </div>
+        <button class="carousel-btn next" onclick="moveSlide(1)">
+            &#10095;
+        </button>
+    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".img_container");
+
+        function showSlide(index) {
+            slides.forEach(slide => {
+                slide.classList.remove("active");
+            });
+
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            slides[currentSlide].classList.add("active");
+        }
+
+        function moveSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        // Erste Box anzeigen
+        showSlide(currentSlide);
+    </script>
+</body>
+
+</html>

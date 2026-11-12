@@ -20,7 +20,7 @@
     --schrift-farbe: #000;
 
     /* Zweitfarbe (z. B. für Akzente oder Hover-Effekte) */
-    --zweit-farbe: #664004ad;
+    --zweit-farbe: #fafaf9e6;
 
     /* Dritte Farbe für zusätzliche Akzente */
     --dritt-farbe: #80ED99;
@@ -51,7 +51,12 @@ body {
 }
 
 /* Gemeinsames Styling für alle Überschriften (h1–h6) */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     /* Verwendet spezielle Überschriftenschriftart */
     font-family: var(--ueberschriften);
 
@@ -87,8 +92,10 @@ ul {
 
 /* Der Begrüßungs-Bildschirm (Vollbild) */
 #intro-screen {
-    z-index: 9999; /* Liegt ganz oben über allem */
-    transition: opacity 1s ease; /* Macht das Ausblenden weich */
+    z-index: 9999;
+    /* Liegt ganz oben über allem */
+    transition: opacity 1s ease;
+    /* Macht das Ausblenden weich */
     font-size: 1.8rem;
     color: rgba(207, 154, 95, 0.914);
     max-width: 600px;
@@ -97,7 +104,7 @@ ul {
     align-items: center;
     display: flex;
     justify-content: center;
-  
+
 
 }
 
@@ -118,7 +125,8 @@ ul {
     /* Erlaubt Umbruch, wenn nicht genug Platz ist */
     flex-wrap: wrap;
 }
-.main-navbar img{
+
+.main-navbar img {
     max-width: 10px;
 }
 
@@ -200,7 +208,7 @@ section p {
     text-align: center;
 }
 
-#ueber-mich div{
+#ueber-mich div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -233,15 +241,17 @@ img {
     /* Bilder dürfen maximal 300 px breit sein */
     width: 200px;
 }
-.bild-beratung{
+
+.bild-beratung {
     width: 350px;
 
 }
 
-.motivationen {
+.flex {
     display: flex;
     justify-content: space-between;
 }
+
 .img_container {
     /* border: 1px solid red; */
     width: 33%;
@@ -300,10 +310,79 @@ footer {
     /* Unterstreichung mit Akzentfarbe */
     text-decoration: underline var(--zweit-farbe) 3px;
 }
-#angebot{
+
+#angebot {
     padding-left: 4rem;
     padding-right: 4rem;
+    display: flex;
+    flex-direction: column;
 }
+
+/*Karousell Code*/
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 2rem 3rem;
+    min-height: 660px;
+}
+
+.carousel-item.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    /* border-radius: 50%; */
+    z-index: 2;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.carousel-btn.prev {
+    left: -60px;
+}
+
+.carousel-btn.next {
+    right: -60px;
+}
+
 /* Media Query: Regeln für kleine Bildschirme (max. 500px) */
 @media screen and (max-width: 500px) {
 
@@ -317,8 +396,9 @@ footer {
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
+
     /* ueber mich wird im Spaltenlayout dargestellt */
-    #ueber-mich{
+    #ueber-mich {
         flex-direction: column;
     }
 
@@ -330,6 +410,7 @@ footer {
     .main-navbar a {
         font-size: 1.4rem;
     }
+
     /* Anpassung des Bereichs mit anderer Hintergrundfarbe */
     .switch-bg-color {
         /* Etwas mehr Innenabstand für kleinere Geräte */
